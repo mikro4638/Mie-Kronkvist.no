@@ -1,0 +1,28 @@
+---
+const { title } = Astro.props;
+import Navbar from "../components/Navbar.astro";
+
+---
+
+<html lang="no">
+  <head>
+    <meta charset="UTF-8" />
+    <title>{title}</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        background: #fafafa;
+      }
+      main {
+        padding: 2rem;
+      }
+    </style>
+  </head>
+  <body>
+    <Navbar />
+    <main>
+      <slot /> 
+    </main>
+  </body>
+</html>
